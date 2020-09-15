@@ -1,0 +1,31 @@
+html
+    head
+    meta(charset='utf-8')
+    link(rel='stylesheet' href='dist/css/main.css')
+    body
+        #app
+            .controlPanel
+                .sorting
+                    .sorting__caption Сортировать по:
+                    .sorting__items(data-items='sorting')
+                        .sorting__selected(data-action='dropdown_open' data-dropdown_target='sorting')
+                            span увеличению цены
+                            img(src='./src/img/arrowDown.png')
+                        .sorting__list(data-dropdown_list='sorting')
+                            .sorting__item.sorting__item--asc.hidden(data-action='sort' data-sort_by='price' data-sort_direction='asc') увеличению цены
+                            .sorting__item.sorting__item--desc(data-action='sort' data-sort_by='price' data-sort_direction='desc') уменьшению цены
+                            .sorting__item.sorting__item--asc(data-action='sort' data-sort_by='name' data-sort_direction='asc') по алфавиту
+                            .sorting__item.sorting__item--desc(data-action='sort' data-sort_by='name' data-sort_direction='desc') по алфавиту с конца
+                .view
+                    .view__caption Вид каталога:
+                    .view__list
+                        .view__item.view__item--active(data-action='change_catalog_view' data-catalog_view='tile')
+                        .view__item(data-action='change_catalog_view' data-catalog_view='table')
+                        .view__item(data-action='change_catalog_view' data-catalog_view='list')
+            .search
+                input.searchLine(type='text' placeholder='Поиск по товарам' data-action='search')
+            .products(data-view='tile')
+
+            .pagination
+        .spinner
+        script(src='./src/js/index.js')

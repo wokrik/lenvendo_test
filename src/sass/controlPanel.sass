@@ -1,0 +1,55 @@
+$dropdownItemHeight: 2rem
+$dropdownItemWidth: 12rem
+
+.controlPanel
+  display: flex
+  align-items: center
+  justify-content: space-between
+  border: 1px solid #e7e8ea
+  padding: .5rem
+
+.sorting
+  display: flex
+
+.sorting__caption
+  height: $dropdownItemHeight
+  line-height: $dropdownItemHeight
+  margin-right: 1rem
+
+.sorting__selected
+  box-sizing: border-box
+  display: flex
+  justify-content: space-between
+  align-items: center
+  height: $dropdownItemHeight
+  width: $dropdownItemWidth
+  border: 1px solid #e7e8ea
+  border-radius: 3px
+  padding: 0 .5rem
+
+  &:hover
+    cursor: pointer
+
+.sorting__items
+  position: relative
+
+.sorting__list
+  position: absolute
+  display: none
+  width: $dropdownItemWidth
+  background: white
+
+  &.opened
+    display: block
+
+.sorting__item
+  box-sizing: border-box
+  height: $dropdownItemHeight
+  width: 100%
+  padding: .5rem
+  border: 1px solid #e7e8ea
+  border-top: none
+
+  &:hover
+    cursor: pointer
+    background: #eee

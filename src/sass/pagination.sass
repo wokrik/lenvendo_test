@@ -1,0 +1,40 @@
+$itemSize: 30px
+
+.pagination
+  text-align: center
+  margin: 2rem auto
+
+  &__container
+    display: inline-block
+
+  &__item
+    display: inline-block
+    width: $itemSize
+    height: $itemSize
+    line-height: $itemSize
+    background: #eff0f1
+    margin-right: .2rem
+    border-radius: 50%
+    text-align: center
+
+    &.current
+      background: #007eff
+      color: white
+
+    &:hover
+      cursor: pointer
+
+  &__control
+    display: inline-block
+    box-sizing: border-box
+    height: $itemSize
+    line-height: $itemSize
+    border: 2px solid #eff0f1
+    border-radius: 2rem
+    padding: 0 2rem
+    margin: .5rem
+
+    &:hover
+      cursor: pointer
+
+

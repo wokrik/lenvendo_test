@@ -1,0 +1,27 @@
+.view
+  display: flex
+  align-items: center
+
+  &__list
+    display: flex
+
+  &__item
+    height: 35px
+    width: 30px
+    display: inline-block
+    background: url('/src/img/catalogView.png')
+
+    &--active
+      background-position-x: -60px !important
+
+    &:hover
+      cursor: pointer
+
+    &[data-catalog_view=tile]
+      background-position: 0 -8px
+
+    &[data-catalog_view=table]
+      background-position: 0 47px
+
+    &[data-catalog_view=list]
+      background-position: 0 102px

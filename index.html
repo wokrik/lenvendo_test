@@ -1,0 +1,39 @@
+
+<html>
+  <head></head>
+  <meta charset="utf-8"/>
+  <link rel="stylesheet" href="dist/css/main.css"/>
+  <body>
+    <div id="app">
+      <div class="controlPanel">
+        <div class="sorting">
+          <div class="sorting__caption">Сортировать по:</div>
+          <div class="sorting__items" data-items="sorting">
+            <div class="sorting__selected" data-action="dropdown_open" data-dropdown_target="sorting"><span>увеличению цены</span><img src="./src/img/arrowDown.png"/></div>
+            <div class="sorting__list" data-dropdown_list="sorting">
+              <div class="sorting__item sorting__item--asc hidden" data-action="sort" data-sort_by="price" data-sort_direction="asc">увеличению цены</div>
+              <div class="sorting__item sorting__item--desc" data-action="sort" data-sort_by="price" data-sort_direction="desc">уменьшению цены</div>
+              <div class="sorting__item sorting__item--asc" data-action="sort" data-sort_by="name" data-sort_direction="asc">по алфавиту</div>
+              <div class="sorting__item sorting__item--desc" data-action="sort" data-sort_by="name" data-sort_direction="desc">по алфавиту с конца</div>
+            </div>
+          </div>
+        </div>
+        <div class="view">
+          <div class="view__caption">Вид каталога:</div>
+          <div class="view__list">
+            <div class="view__item view__item--active" data-action="change_catalog_view" data-catalog_view="tile"></div>
+            <div class="view__item" data-action="change_catalog_view" data-catalog_view="table"></div>
+            <div class="view__item" data-action="change_catalog_view" data-catalog_view="list"></div>
+          </div>
+        </div>
+      </div>
+      <div class="search">
+        <input class="searchLine" type="text" placeholder="Поиск по товарам" data-action="search"/>
+      </div>
+      <div class="products" data-view="tile"></div>
+      <div class="pagination"></div>
+    </div>
+    <div class="spinner"></div>
+    <script src="./src/js/index.js"></script>
+  </body>
+</html>
